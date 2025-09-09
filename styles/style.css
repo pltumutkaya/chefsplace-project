@@ -1,124 +1,17 @@
-/* Google Font Import Link */
+/* ===============================================> Google Font Import Link ================================================>*/
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
 
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
+/* ===============================================> Variables ================================================>*/
 
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-  
- */
-
-/* Variables */
 :root {
   --main-color: #e84242;
   --black-color: #0e0e0e;
   --border: 0.1rem solid rgba(255, 255, 255, 0.4);
 }
 
-/* Css Reset */
+/* ===============================================> Css Reset ================================================>*/
+
 * {
   margin: 0;
   padding: 0;
@@ -131,7 +24,7 @@
   transition: all 0.2s ease;
   font-family: "Poppins", sans-serif;
 }
-/* Global Styles */
+/* ===============================================> Global Styles ================================================>*/
 
 /* Font:62.5% yapınca 1 rem = 10px dönüşümü yapar ve responsive ayarlamalarında font-size sıkıntı çıkarmaz. */
 html {
@@ -141,12 +34,73 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: var(--main-color);
-  height: 200vh;
+/* Scroolbar'ın yürüdüğü track rengini scroolbarın özelliştirilmesi */
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: white;
+}
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 3rem;
 }
 
-/* Header Styles */
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 3rem;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+section {
+  padding: 3.5rem 7%;
+}
+a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2rem 3.75rem;
+  border-radius: 30rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--black-color);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.btn-light {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2rem 3.75rem;
+  border-radius: 30rem;
+  font-size: 1.7rem;
+  color: #0e0e0e;
+  background-color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 0.1rem solid #fff;
+}
+
+.heading span {
+  color: var(--black-color);
+  text-transform: uppercase;
+}
+
+/* =======================================================> Header Section =========================================================>*/
 
 .header {
   background-color: #fff;
@@ -185,3 +139,246 @@ body {
   margin-left: 2rem;
   background-color: transparent;
 }
+
+/* =======================================================> Home Section =========================================================>*/
+
+.home {
+  min-height: 100vh;
+  background: url(../images/home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -14.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.home .content {
+  max-width: 60rem;
+}
+.home .content h3 {
+  font-size: 6rem;
+  color: #fff;
+}
+
+.home .content p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #ccc;
+}
+
+/* =======================================================> Our Menu Section =========================================================>*/
+
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(30rem, 1fr)
+  ); /* !Bu kod için açıklamayı oku */
+
+  /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));  kodunu incelememiz gerekirse
+  
+  1. repeat(...) Aynı tanımı birden çok kez tekrarlamak için kullanılır. Burada her sütun için aynı kural uygulanacak.
+  2. auto-fit Ekran genişliğine sığabildiği kadar sütun oluşturur. Yani tarayıcı genişledikçe mümkün olduğunca fazla kolon yerleştirir Sığmayan olursa otomatik olarak alt satıra geçer.
+  3. minmax(30rem, 1fr) Her kolonun minimum ve maksimum genişliğini belirler.Minimum: 30rem (kolon bundan daha dar olamaz) Maksimum: 1fr (kalan boşluğu eşit şekilde paylaşır) */
+
+  gap: 1.5rem;
+}
+
+.menu .box-container .box {
+  padding: 3rem;
+  border-radius: 3rem;
+  background-color: #fff;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.menu .box-container .box img {
+  width: 100%;
+  object-fit: cover;
+}
+.menu .box-container .box .menu-category {
+  font-size: 1.2rem;
+}
+.menu .box-container .box h3 {
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+.menu .box-container .box .box-head .price {
+  font-size: 2.5rem;
+  padding: 2.5rem 0;
+}
+.menu .box-container .box .price span {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* =====================================================> Our Products Section =========================================================>*/
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.products .box-container .box {
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  border-radius: 3rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.products .box-container .box .box-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 10;
+}
+.products .box-container .box .box-head .title {
+  font-size: 1.4rem;
+}
+.products .box-container .box .box-head .name {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+.products .box-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  border-radius: 3rem;
+}
+.products .box-container .dark-bg .box-head .name,
+.products .box-container .dark-bg .box-head .title {
+  color: white;
+}
+.products .box-container .dark-bg img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: unset;
+}
+.products .box-container .box-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.products .box-container .box-bottom .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.products .box-container .box-bottom .info .price {
+  font-size: 3rem;
+}
+.products .box-container .box-bottom .info .amount {
+  font-size: 1.4rem;
+}
+
+.products .box-container .dark-bg .box-bottom .info .price,
+.products .box-container .dark-bg .box-bottom .info .amount {
+  color: #ffffff;
+}
+.products .box-container .box-bottom .product-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 0.2px solid var(--main-color);
+}
+.products .box-container .box-bottom .product-btn a i {
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+/* =====================================================> About Us Section =========================================================>*/
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.about .row .image {
+  flex: 1 1 45rem;
+  box-shadow: 2px 2px 10px rgb(255, 255, 255);
+}
+
+.about .row .image img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+.about .row .content p {
+  font-size: 1.6rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+/* ===================================================> Customer Review Section =======================================================>*/
+.review .review-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.review .review-box-container .review-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.review .review-box .review-title {
+  font-size: 12rem;
+  text-align: center;
+}
+.review .review-box .box-middle {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+.review .review-box .box-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review .review-box .box-bottom img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+}
+
+.review .review-box .box-bottom .profile-name {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+.review .review-box .box-bottom .ratings {
+  color: gold;
+}
+/* ===================================================> Contact Us Section =======================================================>*/
